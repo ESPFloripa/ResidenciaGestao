@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa de Residência Multiprofissional em Gestão em Saúde</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .brand-blue { color: #005baa; }
+        .brand-green { color: #00a651; }
+        .bg-brand-blue { background-color: #005baa; }
+        .bg-brand-green { background-color: #00a651; }
+        
+        /* Estilos para o card que vira */
+        .flip-card {
+            background-color: transparent;
+            perspective: 1000px;
+        }
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden; /* Safari */
+            backface-visibility: hidden;
+            border-radius: 0.5rem; /* rounded-lg */
+        }
+        .flip-card-back {
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <img src="https://i.imgur.com/cvhWPHQ.png" alt="Logo Prefeitura de Florianópolis" class="h-12">
+                <div>
+                    <h1 class="text-xl md:text-2xl font-bold brand-blue">Residência em Gestão em Saúde</h1>
+                    <p class="text-sm text-gray-600">Escola de Saúde Pública de Florianópolis</p>
+                </div>
+            </div>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#sobre" class="text-gray-600 hover:brand-blue transition duration-300">Sobre</a>
+                <a href="#media" class="text-gray-600 hover:brand-blue transition duration-300">Mídia</a>
+                <a href="#docentes" class="text-gray-600 hover:brand-blue transition duration-300">Coordenação</a>
+                <a href="#matriz" class="text-gray-600 hover:brand-blue transition duration-300">Matriz Curricular</a>
+            </nav>
+            <button class="md:hidden" id="mobile-menu-button">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="hidden md:hidden" id="mobile-menu">
+            <a href="#sobre" class="block py-2 px-4 text-sm hover:bg-gray-200">Sobre</a>
+            <a href="#media" class="block py-2 px-4 text-sm hover:bg-gray-200">Mídia</a>
+            <a href="#docentes" class="block py-2 px-4 text-sm hover:bg-gray-200">Corpo Docente</a>
+            <a href="#matriz" class="block py-2 px-4 text-sm hover:bg-gray-200">Matriz Curricular</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+
+        <!-- Hero Section -->
+        <section class="relative text-center mb-16 bg-cover bg-center rounded-lg shadow-lg pt-40 pb-20 text-white" style="background-image: url('https://i.imgur.com/XS3NYqc.jpeg');">
+            <div class="absolute inset-0 bg-black opacity-60 rounded-lg"></div>
+            <div class="relative z-10 px-4">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Programa de Residência Multiprofissional em Gestão em Saúde</h2>
+                <p class="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto">Uma formação de excelência para fortalecer a gestão do Sistema Único de Saúde (SUS) em Florianópolis.</p>
+                <div class="mt-8">
+                    <a href="https://www.pmf.sc.gov.br/sites/ses/index.php?cms=processo+seletivo+residencia+multiprofissional" target="_blank" rel="noopener noreferrer" class="inline-block bg-brand-green text-white font-bold text-lg px-8 py-4 rounded-lg shadow-md hover:bg-green-700 transition duration-300 transform hover:scale-105">
+                        Inscreva-se Agora!
+                    </a>
+                    <p class="mt-4 font-semibold text-lg bg-red-600 inline-block px-4 py-2 rounded-md shadow-lg">Inscrições abertas até 17/10/2025</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="sobre" class="mb-16">
+            <div class="flip-card h-[450px] md:h-[350px]">
+                <div class="flip-card-inner">
+                    <!-- Frente do Card -->
+                    <div class="flip-card-front bg-white p-8 shadow-lg flex flex-col justify-center">
+                        <h3 class="text-3xl font-bold brand-green mb-6 text-center">Sobre o Programa</h3>
+                        <p class="mb-4 text-justify">O Programa de Residência Multiprofissional em Gestão em Saúde visa formar especialistas com competências para liderar, planejar e avaliar estratégias no âmbito do SUS. Com uma abordagem que integra teoria e prática, o programa prepara profissionais para os desafios da saúde coletiva, com foco na equidade, sustentabilidade e inovação.</p>
+                        <p class="text-justify">Esta iniciativa estratégica da Secretaria Municipal de Saúde de Florianópolis busca desenvolver gestores capacitados e comprometidos com a melhoria contínua do sistema de saúde e a promoção da saúde da população.</p>
+                        <p class="text-center mt-4 text-sm text-gray-400 font-semibold animate-pulse">Passe o mouse para ver os detalhes</p>
+                    </div>
+                    <!-- Costas do Card -->
+                    <div class="flip-card-back bg-gray-100 p-6 shadow-lg flex flex-col justify-center items-center">
+                        <h4 class="font-bold text-2xl mb-4 text-gray-700">Detalhes do Curso</h4>
+                        <ul class="space-y-2 text-left text-sm md:text-base">
+                            <li class="flex items-start"><span class="brand-green font-bold mr-2 mt-1">✔</span> <strong>Nome:</strong> Residência Multiprofissional em Gestão em Saúde</li>
+                            <li class="flex items-start"><span class="brand-green font-bold mr-2 mt-1">✔</span> <strong>Área de Concentração:</strong> Saúde Coletiva / Gestão em Saúde</li>
+                            <li class="flex items-start"><span class="brand-green font-bold mr-2 mt-1">✔</span> <strong>Duração:</strong> 2 anos (24 meses)</li>
+                            <li class="flex items-start"><span class="brand-green font-bold mr-2 mt-1">✔</span> <strong>Carga Horária Total:</strong> 5.760 horas</li>
+                            <li class="flex items-start"><span class="brand-green font-bold mr-2 mt-1">✔</span> <strong>Público-Alvo:</strong> Profissionais de farmácia, odontologia e enfermagem.</li>
+                            <li class="flex items-start"><span class="brand-green font-bold mr-2 mt-1">✔</span> <strong>Vagas:</strong> 1 farmácia, 1 odontologia e 1 enfermagem.</li>
+                            <li class="flex items-start"><span class="brand-green font-bold mr-2 mt-1">✔</span> <strong>Remuneração:</strong> Bolsa de Residência mantida pelo Ministério da Saúde</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Media Section -->
+        <section id="media" class="mb-16">
+            <h3 class="text-3xl font-bold brand-green mb-8 text-center">Mídia</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                <!-- Video 1 -->
+                <div class="bg-white p-4 rounded-lg shadow-lg">
+                    <h4 class="text-xl font-bold mb-4 text-center brand-blue">O que é a Residência em Gestão?</h4>
+                    <div class="aspect-w-16 aspect-h-9">
+                        <iframe class="rounded-md" src="https://www.youtube.com/embed/DLmOUBSCRbM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <!-- Video 2 -->
+                <div class="bg-white p-4 rounded-lg shadow-lg">
+                    <h4 class="text-xl font-bold mb-4 text-center brand-blue">Conheça o Projeto Pedagógico</h4>
+                    <div class="aspect-w-16 aspect-h-9">
+                        <iframe class="rounded-md" src="https://www.youtube.com/embed/ph62htJW1L8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            <!-- Podcast -->
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h4 class="text-2xl font-bold mb-4 text-center brand-blue">Podcast: Residência em Gestão em Saúde na Prática</h4>
+                <div class="w-full">
+                    <iframe src="https://drive.google.com/file/d/18S_F6r9TNzK99byeiXdK37LaO5nlJ7nH/preview" width="100%" height="200" allow="autoplay"></iframe>
+                </div>
+                 <p class="text-center mt-4 text-sm text-gray-500">Ouça a experiência de nossos profissionais sobre os desafios e inovações na gestão do SUS.</p>
+            </div>
+        </section>
+
+        <!-- Faculty Section -->
+        <section id="docentes" class="mb-16 bg-white p-8 rounded-lg shadow-lg">
+            <h3 class="text-3xl font-bold brand-green mb-8 text-center">Coordenação e Gestão do Programa</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <h4 class="font-bold text-lg brand-blue">Edenice Reis da Silveira</h4>
+                    <p class="text-gray-600">Coordenação do Programa</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <h4 class="font-bold text-lg brand-blue">Núlvio Lermen Júnior</h4>
+                    <p class="text-gray-600">Vice-Coordenação do Programa</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <h4 class="font-bold text-lg brand-blue">Daniela Baumgart de Liz Calderon</h4>
+                    <p class="text-gray-600">Tutoria do Programa</p>
+                </div>
+                 <div class="bg-gray-50 p-6 rounded-lg">
+                    <h4 class="font-bold text-lg brand-blue">Alessandra de Quadra Esmeraldino</h4>
+                    <p class="text-gray-600">Coordenação Geral da Escola de Saúde Pública</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <h4 class="font-bold text-lg brand-blue">Erádio Gonçalves Junior</h4>
+                    <p class="text-gray-600">Coordenação da COREMU</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <h4 class="font-bold text-lg brand-blue">Andréa Ferreira Cardoso</h4>
+                    <p class="text-gray-600">Vice-coordenação da COREMU</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Curriculum Section -->
+        <section id="matriz" class="mb-16">
+            <h3 class="text-3xl font-bold brand-green mb-8 text-center">Matriz Curricular</h3>
+            <div class="space-y-6">
+                <div class="p-6 bg-white rounded-lg shadow-lg border-l-4 border-brand-green">
+                    <h4 class="text-xl font-bold brand-blue mb-2">Liderança, Governança e Gestão de Pessoas no SUS</h4>
+                    <p class="text-gray-600">Desenvolve habilidades gerenciais e interpessoais para liderar equipes, tomar decisões estratégicas e garantir a governança e transparência na gestão pública.</p>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-lg border-l-4 border-brand-green">
+                    <h4 class="text-xl font-bold brand-blue mb-2">Gestão da Atenção e Redes de Saúde</h4>
+                    <p class="text-gray-600">Compreende e aplica a organização dos serviços de saúde, fortalecendo a APS como coordenadora do cuidado e garantindo a integração entre os serviços e níveis de atenção.</p>
+                </div>
+                 <div class="p-6 bg-white rounded-lg shadow-lg border-l-4 border-brand-green">
+                    <h4 class="text-xl font-bold brand-blue mb-2">Investigação em Saúde</h4>
+                    <p class="text-gray-600">Ensina metodologias de pesquisa e produção científica aplicadas à gestão, possibilitando a análise de dados para embasar decisões estratégicas.</p>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-lg border-l-4 border-brand-green">
+                    <h4 class="text-xl font-bold brand-blue mb-2">Inovação, Saúde Digital e Equidade na Gestão Pública</h4>
+                    <p class="text-gray-600">Explora o uso da tecnologia na gestão da saúde, desenvolve estratégias inovadoras e garante a equidade no acesso e na qualidade dos serviços.</p>
+                </div>
+                 <div class="p-6 bg-white rounded-lg shadow-lg border-l-4 border-brand-green">
+                    <h4 class="text-xl font-bold brand-blue mb-2">Gestão Financeira, Orçamentária e Logística no SUS</h4>
+                    <p class="text-gray-600">Desenvolve competências para gestão eficiente dos recursos financeiros, logísticos e materiais, garantindo sustentabilidade e transparência.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brand-blue text-white">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <p>&copy; 2025 Prefeitura de Florianópolis - Secretaria Municipal de Saúde.</p>
+            <p class="text-sm text-gray-300">Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Close mobile menu when a link is clicked
+        const mobileMenuLinks = document.querySelectorAll('#mobile-menu a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+
+</body>
+</html>
+
+
