@@ -59,7 +59,7 @@
             <nav class="hidden md:flex space-x-6">
                 <a href="#sobre" class="text-gray-600 hover:brand-blue transition duration-300">Sobre</a>
                 <a href="#media" class="text-gray-600 hover:brand-blue transition duration-300">Mídia</a>
-                <a href="#docentes" class="text-gray-600 hover:brand-blue transition duration-300">Coordenação</a>
+                <a href="#coordenacao" class="text-gray-600 hover:brand-blue transition duration-300">Coordenação</a>
                 <a href="#matriz" class="text-gray-600 hover:brand-blue transition duration-300">Matriz Curricular</a>
             </nav>
             <button class="md:hidden" id="mobile-menu-button">
@@ -70,7 +70,7 @@
         <div class="hidden md:hidden" id="mobile-menu">
             <a href="#sobre" class="block py-2 px-4 text-sm hover:bg-gray-200">Sobre</a>
             <a href="#media" class="block py-2 px-4 text-sm hover:bg-gray-200">Mídia</a>
-            <a href="#docentes" class="block py-2 px-4 text-sm hover:bg-gray-200">Corpo Docente</a>
+            <a href="#coordenacao" class="block py-2 px-4 text-sm hover:bg-gray-200">Coordenação</a>
             <a href="#matriz" class="block py-2 px-4 text-sm hover:bg-gray-200">Matriz Curricular</a>
         </div>
     </header>
@@ -79,7 +79,11 @@
     <main class="container mx-auto px-6 py-12">
 
         <!-- Hero Section -->
-        <section class="relative text-center mb-16 bg-cover bg-center rounded-lg shadow-lg pt-40 pb-20 text-white" style="background-image: url('https://i.imgur.com/XS3NYqc.jpeg');">
+        <section class="relative text-center mb-16 rounded-lg shadow-lg pt-40 pb-20 text-white overflow-hidden">
+            <video autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover">
+                <source src="https://raw.githubusercontent.com/ESPFloripa/divlulgacao-modulo-5/ESPFloripa-patch-1/V%C3%ADdeo_Promocional_de_Florian%C3%B3polis.mp4" type="video/mp4">
+                Seu navegador não suporta a tag de vídeo.
+            </video>
             <div class="absolute inset-0 bg-black opacity-60 rounded-lg"></div>
             <div class="relative z-10 px-4">
                 <h2 class="text-4xl md:text-5xl font-bold mb-4">Programa de Residência Multiprofissional em Gestão em Saúde</h2>
@@ -151,7 +155,7 @@
         </section>
 
         <!-- Faculty Section -->
-        <section id="docentes" class="mb-16 bg-white p-8 rounded-lg shadow-lg">
+        <section id="coordenacao" class="mb-16 bg-white p-8 rounded-lg shadow-lg">
             <h3 class="text-3xl font-bold brand-green mb-8 text-center">Coordenação e Gestão do Programa</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
                 <div class="bg-gray-50 p-6 rounded-lg">
@@ -237,5 +241,6 @@
 
 </body>
 </html>
+
 
 
